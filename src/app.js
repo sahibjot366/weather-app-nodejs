@@ -6,6 +6,7 @@ const getWeatherUpdate=require('./weather.js');
 const publicDirectoryPath=path.join(__dirname,'../public/');
 const viewPath=path.join(__dirname,'../templates/views');
 const partialsPath=path.join(__dirname,'../templates//partials');
+const port=process.env.PORT || 3000;
 app.set('view engine','hbs');
 app.set('views',viewPath);
 hbs.registerPartials(partialsPath);
@@ -56,6 +57,6 @@ app.get('*',(req,res)=>{
         errorMessage:'404 Page Not Found!'
     })
 })
-app.listen(3000,()=>{
-    console.log('Server running on port 3000...');
+app.listen(port,()=>{
+    console.log(`Server running on port ${port}...`);
 })

@@ -6,7 +6,7 @@ const updatesPara=document.querySelector('#WeatherUpdate')
 
 weatherForm.addEventListener('submit',e=>{
     e.preventDefault();
-    fetch(`http://localhost:3000/weather?location=${weatherInput.value}`).then(response=>{
+    fetch(`/weather?location=${weatherInput.value}`).then(response=>{
         weatherInput.value=''
         response.json().then(data=>{
             errorPara.textContent='';
