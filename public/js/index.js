@@ -1,3 +1,4 @@
+console.log('loaded!')
 const weatherForm=document.querySelector('form');
 const weatherInput=document.querySelector('input');
 const errorPara=document.querySelector('#errorMessage');
