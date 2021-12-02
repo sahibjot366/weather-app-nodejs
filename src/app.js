@@ -5,7 +5,7 @@ const hbs=require('hbs');
 const getWeatherUpdate=require('./weather.js');
 const publicDirectoryPath=path.join(__dirname,'../public/');
 const viewPath=path.join(__dirname,'../templates/views');
-const partialsPath=path.join(__dirname,'../templates//partials');
+const partialsPath=path.join(__dirname,'../templates/partials');
 const port=process.env.PORT || 3000;
 app.set('view engine','hbs');
 app.set('views',viewPath);

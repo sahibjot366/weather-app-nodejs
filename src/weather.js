@@ -1,9 +1,8 @@
 const axios = require('axios').create({baseURL:'http://api.weatherstack.com/'});
 const getWeatherUpdate=(city,callback)=>{
-  // const url=`http://api.weatherstack.com/current?access_key=74fb8158ed49ec5ad4ca2feee4bc89f8&query=${city}`
     axios.get('/current',{
         params:{
-            access_key:'74fb8158ed49ec5ad4ca2feee4bc89f8',
+            access_key:process.env.WEATHERSTACK_API,
             query:city
         }
     })
